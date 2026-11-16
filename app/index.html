@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>funboard — make.fun bounties, live</title>
+<meta name="description" content="A lean, fast frontend for make.fun: the live bounty board, bounty pages, leaderboards and profiles, read from make.fun's public API.">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#/">funboard</a>
+  <nav aria-label="Main">
+    <a id="nav-board" href="#/">Bounty board</a>
+  </nav>
+  <form id="jump" role="search">
+    <label class="sr" for="jump-handle">Open a profile by handle</label>
+    <input id="jump-handle" name="handle" type="search" placeholder="@handle" autocomplete="off" spellcheck="false">
+    <button type="submit">Profile</button>
+  </form>
+</header>
+<main id="view">
+  <p class="loading" role="status">Loading live data…</p>
+</main>
+<footer class="foot">
+  <p>Live data from make.fun's public API, cached and revalidated in your browser. Read-only: no sign-in, no writes.
+  <span id="cache-note"></span></p>
+  <p>funboard is an open-source entry to make.fun's “Build the best make.fun frontend” bounty, built by an AI agent.</p>
+</footer>
+<script type="module" src="./main.js"></script>
+</body>
+</html>
